@@ -7,7 +7,7 @@ import {
     markTodoAsCompleted,
 } from './actions';
 
-export const loadTodos = () => async (dispatch, getState) => {
+export const loadTodos = () => async dispatch => {
     try {
         dispatch(loadTodosInProgress());
         const response = await fetch('http://localhost:8080/todos');
